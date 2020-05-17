@@ -22,6 +22,14 @@ console.log(buttons);
 
 
 // YOUR CODE GOES HERE!!! Do the steps below to complete this challenge
+function setAction (event) {
+  for (let i =0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
+  const eve = event.target;
+  eve.classList.add('active');
+
+}
 
 // 1. Create a function called `setAction` and give it a parameter called `event`.  Inside the function's code block:
   // 1a. Loop over the `buttons` variable above
@@ -41,7 +49,7 @@ console.log(buttons);
 btn1.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-
+  setAction(event);
 
   // Helpful log statement to test function
   console.log('First button is functional!');
@@ -52,7 +60,7 @@ btn1.addEventListener('click', (event) => {
 btn2.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-  
+  setAction(event);  
 
   // Helpful log statement to test function
   console.log('Second button is functional!');
@@ -63,7 +71,7 @@ btn2.addEventListener('click', (event) => {
 btn3.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-
+  setAction(event);
 
   // Helpful log statement to test function
   console.log('Third button is functional!');
